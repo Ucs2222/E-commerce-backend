@@ -24,7 +24,8 @@ app.use(cors({
 app.use(express.json());
 
 // ✅ Serve static files (like images) from /public
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
+
 
 // ✅ API routes
 app.use('/api/auth', authRoutes);

@@ -3,7 +3,7 @@ const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
   password: 'Ramu@Lakshmi',
-  database: 'ecommerce',
+  database: 'myecommerce',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
