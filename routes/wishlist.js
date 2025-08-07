@@ -53,7 +53,7 @@ router.get('/:userId', async (req, res) => {
 
   try {
     const [items] = await pool.execute(
-      `SELECT w.*, p.id as product_id, p.name, p.price, p.image_url, p.description
+      `SELECT w.*, p.id as product_id, p.name, p.price, p.image_url, p.description,p.quantity,p.quality
        FROM wishlist w
        JOIN products p ON w.product_id = p.id
        WHERE w.user_id = ?`,
